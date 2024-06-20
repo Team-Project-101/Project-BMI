@@ -5,14 +5,18 @@ sets the close operation, size, and layout of the frame.
 Import Statements:
 •	javax.swing.*: Imports all classes from the Swing package, which is used for creating the GUI components.
 •	java.awt.*: Imports all classes from the AWT package, which provides classes for the GUI's layout and events.
-•	java.awt.event.ActionEvent and java.awt.event.ActionListener: Import specific classes needed to handle action events like button clicks.
-•  Class Definition:
+•	java.awt.event.ActionEvent and java.awt.event.ActionListener: Import specific classes needed to handle action events like button clicks. 
+
+Class Definition:
 •	public class HealthAppGUI: Defines the main class of the application named HealthAppGUI.
-•  Main Method:
+
+Main Method:
 •	public static void main(String[] args): The entry point of the Java application. This is where the program starts executing.
-•  Creating the Frame:
+
+Creating the Frame:
 •	JFrame frame = new JFrame("BMI Calculator"): Creates a new JFrame window with the title "BMI Calculator".
 •	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE): Ensures the application exits when the window is closed.
 •	frame.setSize(400, 300): Sets the size of the window to 400 pixels wide and 300 pixels tall.
-•	frame.setLayout(new GridLayout(7, 1)): Sets the layout manager for the frame to a GridLayout with 7 rows and 1 column, arranging components vertically in a single column.
+•	frame.setLayout(new GridLayout(7, 1)): Sets the layout manager for the frame to a GridLayout with 7 rows and 1 column, arranging 
+  components vertically in a single column.
 
