@@ -31,3 +31,31 @@ public class HealthAppGUI {
         frame.add(calculateButton);
         frame.add(resultLabel);
         frame.add(adviceLabel);
+        // Define the action for the button
+        calculateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    double height = Double.parseDouble(heightField.getText());
+                    double weight = Double.parseDouble(weightField.getText());
+
+                    // Calculate BMI
+                    double bmi = calculateBMI(weight, height);
+                    resultLabel.setText("Your BMI is: " + String.format("%.2f", bmi));
+
+                    // Determine BMI category and provide meal plan and exercise
+                    String category = determineBMICategory(bmi);
+                    String advice = getMealPlanAndExercise(category);
+                    adviceLabel.setText("<html>" + advice.replace("\n", "<br>") + "</html>");
+
+                } catch (NumberFormatException ex) {
+                    resultLabel.setText("Please enter valid numbers.");
+                    adviceLabel.setText("");
+                }
+            }
+        });
+
+        // Show the frame
+        frame.setVisible(true);
+    }
+
