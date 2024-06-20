@@ -58,4 +58,7 @@ public class HealthAppGUI {
         // Show the frame
         frame.setVisible(true);
     }
+public static double calculateBMI(double weight, double height) {
+        return weight / (height * height);
+    }
 
