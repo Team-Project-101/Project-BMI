@@ -61,4 +61,30 @@ public class HealthAppGUI {
 public static double calculateBMI(double weight, double height) {
         return weight / (height * height);
     }
+    public static String determineBMICategory(double bmi) {
+        if (bmi < 18.5) {
+            return "Underweight";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+            return "Normal weight";
+        } else if (bmi >= 25 && bmi < 29.9) {
+            return "Overweight";
+        } else {
+            return "Obese";
+        }
+    }
+
+    public static String getMealPlanAndExercise(String category) {
+        switch (category) {
+            case "Underweight":
+                return "Meal Plan: High-calorie foods, frequent meals, protein-rich foods, whole grains, healthy fats.\nExercise: Strength training exercises to build muscle mass.";
+            case "Normal weight":
+                return "Meal Plan: Balanced diet including fruits, vegetables, lean proteins, whole grains.\nExercise: Regular cardio and strength training exercises to maintain weight.";
+            case "Overweight":
+                return "Meal Plan: Low-calorie foods, more fruits and vegetables, lean proteins, limit sugar and fat intake.\nExercise: Cardio exercises like running, cycling, and strength training.";
+            case "Obese":
+                return "Meal Plan: Very low-calorie foods, high-fiber foods, avoid sugary and fatty foods.\nExercise: Start with low-impact exercises like walking or swimming, gradually increase intensity.";
+            default:
+                return "Invalid category.";
+        }
+    }
 
