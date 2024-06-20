@@ -33,7 +33,7 @@ public class HealthAppGUI {
         frame.add(adviceLabel);
         // Define the action for the button
         calculateButton.addActionListener(new ActionListener() {
-            @Override
+        
             public void actionPerformed(ActionEvent e) {
                 try {
                     double height = Double.parseDouble(heightField.getText());
