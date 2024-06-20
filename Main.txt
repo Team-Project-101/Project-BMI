@@ -41,3 +41,4 @@ o	Handling Input Errors:
 	adviceLabel.setText(""): Clears the advice label.\
 •  Displaying the Frame:
 •	frame.setVisible(true): Makes the frame visible, displaying the GUI to the user. This should be done after all components have been added and configured
+This part defines a method calculateBMI that takes weight and height as parameters and returns the BMI value calculated using the formula: weight divided by the square of the height.
