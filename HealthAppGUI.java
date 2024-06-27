@@ -38,6 +38,8 @@ public class HealthAppGUI {
                 try {
                     double height = Double.parseDouble(heightField.getText());
                     double weight = Double.parseDouble(weightField.getText());
+                     if (height > 4.0) {
+               throw new IllegalArgumentException("Height exceeds the maximum limit of 4 meters.");
 
                     // Calculate BMI
                     double bmi = calculateBMI(weight, height);
@@ -52,6 +54,10 @@ public class HealthAppGUI {
                     resultLabel.setText("Please enter valid numbers.");
                     adviceLabel.setText("");
                 }
+                catch (IllegalArgumentException ex) {
+                   resultLabel.setText("Invalid category");
+                   adviceLabel.setText("");
+               }
             }
         });
 
