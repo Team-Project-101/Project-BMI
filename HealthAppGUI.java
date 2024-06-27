@@ -54,6 +54,10 @@ public class HealthAppGUI {
                     resultLabel.setText("Please enter valid numbers.");
                     adviceLabel.setText("");
                 }
+                catch (IllegalArgumentException ex) {
+                   resultLabel.setText("Invalid category");
+                   adviceLabel.setText("");
+               }
             }
         });
 
